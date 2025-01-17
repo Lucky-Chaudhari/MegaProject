@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     required:true,
 
   },
-  acountType:{
+  accountType:{
      type:String,
      enum:["Admin","Student","Instructor"],
      required:true,
@@ -42,6 +42,12 @@ const userSchema = new mongoose.Schema({
     type:String,
     required:true,
 
+  },
+  token:{
+    type:String,
+  },
+  resetPasswordExpires:{
+      type:Date,
   },
   coursePrograss:[
      {
